@@ -1,3 +1,4 @@
+// @ts-nocheck
 const StarDivider = () => (
   <div className="flex items-center gap-4 w-full max-w-7xl mx-auto px-6 md:px-12 py-2">
     <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent to-brand-silver/10" />

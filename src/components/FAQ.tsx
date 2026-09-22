@@ -1,70 +1,55 @@
-import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+// @ts-nocheck
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const faqs = [
-  {
-    q: 'Who can participate in Nakshatra?',
-    a: 'Nakshatra is open to undergraduate and postgraduate students from any recognized university across India. Teams can have 3-5 members.'
-  },
-  {
-    q: 'Do I need prior aerospace experience?',
-    a: 'While helpful, it is not mandatory. We are looking for strong problem-solving skills in software, hardware, and data analysis. Mentors will be available to help bridge domain knowledge gaps.'
-  },
-  {
-    q: 'Is this an online or offline hackathon?',
-    a: 'The initial idea submission and shortlisting phases are online. The grand finale will be an offline 48-hour intensive build phase.'
-  },
-  {
-    q: 'What is the evaluation criteria?',
-    a: 'Projects are evaluated on technical complexity, innovation, practical viability in space environments, and presentation quality.'
-  }
-];
+export default function FAQ() {
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
-const FAQ = () => {
-  const [open, setOpen] = useState<number | null>(0);
+  const faqs = [
+    { q: "Who can participate?", a: "NAKSHATRA is open to all college/university students including engineering, management, arts, commerce, sciences, law, and medical." },
+    { q: "Can students from different colleges form a team?", a: "Yes. Inter-college, inter-specialisation, and inter-branch teams are fully permitted." },
+    { q: "Where is the final round?", a: "The 12-hour offline Final Round will be held at the MITS Campus, Gwalior on 24-25 October 2026." }
+  ];
 
   return (
-    <section id="faq" className="py-32 px-6 md:px-12 bg-gradient-to-t from-brand-navy to-[#060b14] border-t border-white/5">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-display text-white">SYSTEM QUERIES</h2>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          {faqs.map((faq, i) => (
-            <div 
-              key={i} 
-              className="border border-white/10 bg-[#05080D] transition-colors"
-            >
-              <button 
-                className="w-full text-left px-8 py-6 flex justify-between items-center focus:outline-none"
-                onClick={() => setOpen(open === i ? null : i)}
-              >
-                <span className={`text-lg font-medium transition-colors ${open === i ? 'text-brand-blue' : 'text-white'}`}>
+    <section id="faq" className="py-32 px-10 bg-[#242323] text-white">
+      <div className="max-w-3xl mx-auto">
+        <h3 className="text-6xl font-syncopate font-bold text-center mb-20 uppercase">Inquiries</h3>
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIdx === idx;
+            return (
+              <div key={idx} className="rounded-3xl bg-white/5 border border-white/10 overflow-hidden">
+                <button 
+                  onClick={() => setOpenIdx(isOpen ? null : idx)}
+                  className="w-full p-8 flex justify-between items-center cursor-pointer font-space font-bold tracking-widest uppercase text-xs hover:bg-white/5 transition-colors"
+                >
                   {faq.q}
-                </span>
-                {open === i ? (
-                  <Minus size={20} className="text-brand-blue flex-shrink-0" />
-                ) : (
-                  <Plus size={20} className="text-brand-silver/50 flex-shrink-0" />
-                )}
-              </button>
-              
-              <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  open === i ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="px-8 pb-8 pt-0 text-brand-silver/60 font-light leading-relaxed">
-                  {faq.a}
-                </div>
+                  <motion.span 
+                    animate={{ rotate: isOpen ? 45 : 0 }} 
+                    className="iconify text-xl text-[#b91f1f]" 
+                    data-icon="lucide:plus"
+                  />
+                </button>
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className="px-8 pb-8 text-[#bdb9b2]/80 text-sm font-space">
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
-};
-
-export default FAQ;
+}

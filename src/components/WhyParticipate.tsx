@@ -1,117 +1,77 @@
-import { useEffect, useRef } from 'react';
-import { Compass, Cpu, Users, Rocket } from 'lucide-react';
+// @ts-nocheck
+import React, { useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const reasons = [
-  {
-    id: '01',
-    title: 'Explore',
-    description: 'Dive deep into complex aerospace datasets and simulation environments to uncover new possibilities.',
-    icon: Compass,
-  },
-  {
-    id: '02',
-    title: 'Build',
-    description: 'Engineer robust software and hardware solutions using cutting-edge space technology stacks.',
-    icon: Cpu,
-  },
-  {
-    id: '03',
-    title: 'Collaborate',
-    description: 'Work alongside driven peers and receive mentorship from industry veterans and scientists.',
-    icon: Users,
-  },
-  {
-    id: '04',
-    title: 'Launch',
-    description: 'Deploy your prototypes and gain visibility among top aerospace organizations.',
-    icon: Rocket,
-  }
-];
+export default function WhyParticipate() {
+  const containerRef = useRef<HTMLElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
-const WhyParticipate = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  useGSAP(() => {
+    gsap.fromTo(textRef.current?.children || [],
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "expo.out",
+        scrollTrigger: { trigger: containerRef.current, start: "top 75%" }
+      }
+    );
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.why-header', {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out',
-      });
-      gsap.from('.why-card', {
-        scrollTrigger: { trigger: '.why-grid', start: 'top 80%' },
-        y: 50,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.12,
-        ease: 'power3.out',
-      });
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
+    gsap.fromTo(cardsRef.current?.children || [],
+      { y: 100, opacity: 0, scale: 0.9 },
+      {
+        y: 0, opacity: 1, scale: 1, duration: 1, stagger: 0.15, ease: "back.out(1.2)",
+        scrollTrigger: { trigger: containerRef.current, start: "top 60%" }
+      }
+    );
+  }, { scope: containerRef });
+
+  const steps = [
+    { num: "01", title: "Explore", desc: "Engage with aerospace-focused problem statements across space, astronomy, and aeronautics." },
+    { num: "02", title: "Build", desc: "Develop cutting-edge software or hardware solutions during the intense 12-hour build sprint." },
+    { num: "03", title: "Collaborate", desc: "Team up across disciplines to combine unique skill sets and solve complex challenges." },
+    { num: "04", title: "Present", desc: "Pitch your innovations directly to industry experts and university leaders." }
+  ];
 
   return (
-    <section
-      id="why"
-      ref={sectionRef}
-      className="relative py-32 px-6 md:px-12 bg-[#000000] overflow-hidden"
-    >
-      {/* Ambient radial glow behind the grid */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(141,184,255,0.03)_0%,transparent_65%)]" />
-      </div>
+    <section ref={containerRef} className="py-32 bg-[#1c1b1b] text-white px-10 md:px-20 relative overflow-hidden">
+      {/* Background SVG Grid */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%23ffffff\\' fill-opacity=\\'1\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')" }}></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="why-header flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
-          <div>
-            <div className="text-brand-blue/60 font-mono tracking-widest text-xs mb-4 uppercase">Why Participate</div>
-            <h2 className="text-3xl md:text-5xl font-display text-white">MISSION PARAMETERS</h2>
-          </div>
-          <p className="max-w-md text-brand-silver/50 font-light text-sm">
-            Designed for those who seek to contribute to the next generation of space exploration and aerospace engineering.
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div ref={textRef} className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <h2 className="text-6xl md:text-8xl font-syncopate font-bold leading-none uppercase text-white">Why <br/><span className="text-[#bdb9b2]">Join?</span></h2>
+          <p className="max-w-md text-lg text-[#bdb9b2]/80 font-space font-medium">
+            Engage with aerospace problem statements and build innovative solutions that push boundaries.
           </p>
         </div>
-
-        <div className="why-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.04]">
-          {reasons.map((reason) => (
-            <div
-              key={reason.id}
-              className="why-card relative bg-[#000000] p-10 group overflow-hidden cursor-default"
+        
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {steps.map((step, idx) => (
+            <motion.div 
+              key={idx}
+              whileHover={{ y: -10, backgroundColor: 'rgba(0, 98, 255, 0.1)', borderColor: 'rgba(0, 240, 255, 0.5)' }}
+              transition={{ duration: 0.3 }}
+              className="p-10 border border-white/10 rounded-[2.5rem] bg-white/[0.02] backdrop-blur-md group cursor-pointer flex flex-col justify-between min-h-[300px]"
             >
-              {/* Hover fill */}
-              <div className="absolute inset-0 bg-brand-blue/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="text-brand-blue/20 font-mono text-xs mb-10 tracking-widest">{reason.id}</div>
-
-              <div className="relative z-10 mb-6">
-                <reason.icon
-                  size={30}
-                  className="text-brand-silver/30 group-hover:text-brand-blue transition-all duration-500"
-                  strokeWidth={1}
-                />
-                {/* Icon glow on hover */}
-                <div className="absolute -inset-2 rounded-full bg-brand-blue/10 opacity-0 group-hover:opacity-100 blur-sm transition-all duration-500" />
+              <div>
+                <h4 className="text-3xl font-orbitron font-bold mb-6 text-white group-hover:text-[#b91f1f] transition-colors">
+                  <span className="text-[#bdb9b2] text-xl block mb-2">{step.num} /</span>
+                  {step.title}
+                </h4>
+                <p className="opacity-60 text-sm font-space text-[#bdb9b2] leading-relaxed">{step.desc}</p>
               </div>
-
-              <h3 className="relative z-10 text-xl text-white font-medium mb-4 tracking-wide">{reason.title}</h3>
-              <p className="relative z-10 text-brand-silver/40 font-light text-sm leading-relaxed">
-                {reason.description}
-              </p>
-
-              {/* Bottom blue line reveal */}
-              <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-brand-blue/0 via-brand-blue/50 to-brand-blue/0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700" />
-            </div>
+              <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:border-[#b91f1f] group-hover:bg-[#b91f1f]/10 transition-all">
+                <iconify-icon icon="lucide:arrow-right" className="iconify text-xl group-hover:text-[#b91f1f] transition-colors" ></iconify-icon>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default WhyParticipate;
+}

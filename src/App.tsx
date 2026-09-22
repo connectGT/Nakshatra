@@ -1,49 +1,57 @@
+import { useEffect } from 'react';
+import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import WhyParticipate from './components/WhyParticipate';
 import Challenges from './components/Challenges';
-import Schedule from './components/Schedule';
+import Timeline from './components/Timeline';
 import Rewards from './components/Rewards';
+import Criteria from './components/Criteria';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
-import StarfieldCanvas from './components/StarfieldCanvas';
-import ScrollProgress from './components/ScrollProgress';
-import StarDivider from './components/StarDivider';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// @ts-nocheck
+export default function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
 
-function App() {
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
-    <div className="bg-[#020408] min-h-screen text-brand-silver relative">
-      {/* Global persistent starfield — behind everything */}
-      <StarfieldCanvas />
-      {/* Scroll progress bar */}
-      <ScrollProgress />
-
-      <Navbar />
-      <main className="relative z-10">
-        <Hero />
-        <StarDivider />
-        <About />
-        <StarDivider />
-        <WhyParticipate />
-        <StarDivider />
-        <Challenges />
-        <StarDivider />
-        <Schedule />
-        <StarDivider />
-        <Rewards />
-        <StarDivider />
-        <FAQ />
-        <FinalCTA />
-      </main>
+    <>
+      <div className="noise-overlay"></div>
+      <div className="main-frame bg-[#242323] relative w-full overflow-hidden">
+        <Navbar />
+      <Hero />
+      <About />
+      <WhyParticipate />
+      <Challenges />
+      <Timeline />
+      <Rewards />
+      <Criteria />
+      <FAQ />
+      <FinalCTA />
       <Footer />
     </div>
+    </>
   );
 }
-
-export default App;

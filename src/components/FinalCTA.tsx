@@ -1,131 +1,40 @@
-import { useEffect, useRef } from 'react';
+// @ts-nocheck
+import React, { useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Tiny canvas starfield used only in FinalCTA
-const MiniStars = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+export default function FinalCTA() {
+  const containerRef = useRef<HTMLElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-    const stars = Array.from({ length: 120 }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 1 + 0.2,
-      o: Math.random() * 0.5 + 0.05,
-    }));
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (const s of stars) {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${s.o})`;
-      ctx.fill();
-    }
-  }, []);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      aria-hidden="true"
-    />
-  );
-};
-
-const FinalCTA = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const btnRef = useRef<HTMLAnchorElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Headline scale reveal
-      gsap.from('.final-headline', {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
-        scale: 1.06,
-        opacity: 0,
-        duration: 1.4,
-        ease: 'power3.out',
-      });
-
-      // CTA button fade up
-      gsap.from('.final-cta-btn', {
-        scrollTrigger: { trigger: '.final-headline', start: 'top 60%' },
-        y: 20,
-        opacity: 0,
-        duration: 1,
-        delay: 0.4,
-        ease: 'power2.out',
-      });
-
-      // Button breathing pulse
-      if (btnRef.current) {
-        gsap.to(btnRef.current, {
-          boxShadow: '0 0 24px rgba(141,184,255,0.25)',
-          duration: 2.5,
-          yoyo: true,
-          repeat: -1,
-          ease: 'sine.inOut',
-        });
+  useGSAP(() => {
+    gsap.to(bgRef.current, {
+      yPercent: 50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
       }
-
-      // Horizon glow pulse
-      gsap.to('.final-glow', {
-        opacity: 0.6,
-        duration: 3,
-        yoyo: true,
-        repeat: -1,
-        ease: 'sine.inOut',
-      });
-    }, sectionRef);
-    return () => ctx.revert();
-  }, []);
+    });
+  }, { scope: containerRef });
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-48 px-6 md:px-12 flex items-center justify-center overflow-hidden bg-[#000000]"
-    >
-      {/* Starfield */}
-      <MiniStars />
-
-      {/* Horizon glow */}
-      <div className="final-glow absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-32 opacity-30 pointer-events-none bg-[radial-gradient(ellipse_at_bottom,rgba(141,184,255,0.15)_0%,transparent_70%)]" />
-
-      {/* Top border */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-silver/10 to-transparent" />
-
-      <div className="relative z-10 text-center flex flex-col items-center gap-12">
-        <h2 className="final-headline text-4xl md:text-6xl lg:text-8xl font-display font-light text-white leading-none tracking-tight">
-          THE SKY IS NOT <br />
-          <span className="text-brand-silver/60">THE LIMIT.</span>
-        </h2>
-
-        <a
-          ref={btnRef}
-          href="#register"
-          className="final-cta-btn relative px-12 py-5 border border-brand-blue/30 bg-brand-blue/[0.06] hover:bg-brand-blue/10 text-brand-blue transition-all duration-500 font-mono tracking-[0.25em] text-sm group"
-        >
-          <span className="relative z-10 flex items-center gap-4">
-            EXPLORE NAKSHATRA
-            <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
-          </span>
-        </a>
-
-        <div className="text-brand-silver/20 font-mono text-[10px] tracking-widest">
-          NAKSHATRA · THE AEROSPACE HACKATHON 2026
+    <section ref={containerRef} className="py-48 bg-[#bdb9b2] text-white text-center relative overflow-hidden">
+      <div ref={bgRef} className="absolute inset-[-50%] opacity-20 pointer-events-none">
+         <div className="absolute w-full h-full bg-[radial-gradient(circle_at_center,white_2px,transparent_2px)] bg-[length:60px_60px]"></div>
+      </div>
+      <div className="relative z-10 px-10">
+        <h3 className="text-[clamp(4rem,8vw,8rem)] font-syncopate font-bold leading-[0.9] mb-12 uppercase drop-shadow-2xl">The Sky is <br />not the limit.</h3>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="#" className="px-16 py-6 bg-white text-black font-orbitron font-bold uppercase tracking-[0.3em] rounded-full hover:bg-[#151414] hover:text-[#b91f1f] transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.4)]">Register Now</a>
+          <a href="#" className="px-16 py-6 border-2 border-white/40 text-white font-orbitron font-bold uppercase tracking-[0.3em] rounded-full hover:bg-white hover:text-[#bdb9b2] transition-all duration-300">Download Folio</a>
         </div>
       </div>
     </section>
   );
-};
-
-export default FinalCTA;
+}

@@ -1,50 +1,55 @@
-import {} from 'react';
+// @ts-nocheck
+import React from 'react';
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-brand-navy pt-20 pb-10 px-6 md:px-12 border-t border-white/10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
-        <div className="flex-1">
-          <div className="text-2xl font-display font-bold tracking-widest text-brand-silver mb-6">
-            NAKSHATRA<span className="text-brand-blue">.</span>
+    <footer id="contact" className="bg-[#242323] pt-32 pb-16 px-10 md:px-20 text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-20 pb-20 border-b border-white/5">
+          <div className="lg:col-span-5">
+            <h4 className="font-syncopate font-bold text-4xl mb-8 tracking-widest">NAKSHATRA</h4>
+            <p className="text-[#bdb9b2]/60 font-space leading-relaxed max-w-sm mb-10">
+              Organised by Aerospace Club, Madhav Institute of Technology & Science (MITS), Gwalior.
+            </p>
+            <div className="space-y-2">
+              <p className="text-[10px] font-space uppercase font-bold tracking-[0.4em] text-[#bdb9b2]">Lead Organiser</p>
+              <h5 className="text-xl font-orbitron font-bold">Shreya Goyal</h5>
+              <a href="mailto:shreyagoyal401@gmail.com" className="text-[#bdb9b2]/80 font-space hover:text-[#b91f1f] transition-colors">shreyagoyal401@gmail.com</a>
+            </div>
           </div>
-          <p className="text-brand-silver/50 font-light max-w-sm text-sm leading-relaxed">
-            The national aerospace hackathon fostering innovation and exploration for the next generation of space technology.
-          </p>
+          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-12">
+            <div>
+              <h5 className="text-[10px] font-space uppercase font-bold tracking-widest text-[#bdb9b2] mb-6">Directory</h5>
+              <nav className="flex flex-col space-y-3 text-sm font-space text-[#bdb9b2]/80">
+                <a href="#about" className="hover:text-white transition-colors">Genesis</a>
+                <a href="#tracks" className="hover:text-white transition-colors">Missions</a>
+                <a href="#timeline" className="hover:text-white transition-colors">Chronology</a>
+                <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+              </nav>
+            </div>
+            <div>
+              <h5 className="text-[10px] font-space uppercase font-bold tracking-widest text-[#bdb9b2] mb-6">Legal</h5>
+              <nav className="flex flex-col space-y-3 text-sm font-space text-[#bdb9b2]/80">
+                <a href="#" className="hover:text-white transition-colors">Privacy</a>
+                <a href="#" className="hover:text-white transition-colors">Terms</a>
+                <a href="#" className="hover:text-white transition-colors">Conduct</a>
+              </nav>
+            </div>
+            <div>
+              <h5 className="text-[10px] font-space uppercase font-bold tracking-widest text-[#bdb9b2] mb-6">Social</h5>
+              <div className="flex gap-6">
+                <a href="#" className="text-2xl text-white/20 hover:text-[#b91f1f] transition-colors"><iconify-icon icon="mdi:linkedin" className="iconify" ></iconify-icon></a>
+                <a href="#" className="text-2xl text-white/20 hover:text-[#b91f1f] transition-colors"><iconify-icon icon="mdi:instagram" className="iconify" ></iconify-icon></a>
+                <a href="#" className="text-2xl text-white/20 hover:text-[#b91f1f] transition-colors"><iconify-icon icon="mdi:twitter" className="iconify" ></iconify-icon></a>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div className="flex gap-16 flex-wrap">
-          <div>
-            <h4 className="text-white font-mono text-xs tracking-widest mb-6">NAVIGATION</h4>
-            <ul className="flex flex-col gap-3 text-sm text-brand-silver/60 font-light">
-              <li><a href="#about" className="hover:text-brand-blue transition-colors">About</a></li>
-              <li><a href="#challenges" className="hover:text-brand-blue transition-colors">Challenges</a></li>
-              <li><a href="#schedule" className="hover:text-brand-blue transition-colors">Schedule</a></li>
-              <li><a href="#rewards" className="hover:text-brand-blue transition-colors">Rewards</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-mono text-xs tracking-widest mb-6">LEGAL</h4>
-            <ul className="flex flex-col gap-3 text-sm text-brand-silver/60 font-light">
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-brand-blue transition-colors">Code of Conduct</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-brand-silver/30 text-xs font-mono">
-        <div>&copy; 2026 NAKSHATRA. All rights reserved.</div>
-        <div className="mt-4 md:mt-0 flex gap-6">
-          <a href="#" className="hover:text-white transition-colors">TWITTER</a>
-          <a href="#" className="hover:text-white transition-colors">LINKEDIN</a>
-          <a href="#" className="hover:text-white transition-colors">INSTAGRAM</a>
+        <div className="pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-mono font-bold uppercase tracking-[0.5em] text-white/20">
+          <p>© 2026 Aerospace Club MITS. All rights reserved.</p>
+          <p>Gwalior, Madhya Pradesh, India</p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

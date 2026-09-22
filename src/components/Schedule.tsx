@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -5,10 +6,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const scheduleSteps = [
-  { phase: '01', title: 'Registration Opens', date: 'Oct 15, 2025', desc: 'Teams register and submit intent to participate.' },
-  { phase: '02', title: 'Idea Submission', date: 'Nov 10, 2025', desc: 'Submit your problem statement and initial solution brief.' },
-  { phase: '03', title: 'Shortlist Announcement', date: 'Dec 05, 2025', desc: 'Top teams announced and invited to the finale.' },
-  { phase: '04', title: 'Grand Finale', date: 'Jan 20–22, 2026', desc: '48-hour intensive build sprint and final judging.' },
+  { phase: '01', title: 'REGISTRATION / ROUND 1', date: '20 SEP - 30 SEP 2026', desc: 'Teams choose one problem statement and prepare their solution PPT.' },
+  { phase: '02', title: 'REGISTRATION DEADLINE', date: '26 SEP 2026', desc: 'Registrations close by 10:08 PM IST.' },
+  { phase: '03', title: 'PPT SUBMISSION', date: '30 SEP 2026', desc: 'The completed PPT must be submitted by 30 September 2026.' },
+  { phase: '04', title: 'FINAL 12-HOUR HACKATHON', date: '24–25 OCT 2026', desc: '12-hour on-campus Final Round at MITS, Gwalior.' },
 ];
 
 const Schedule = () => {
@@ -75,8 +76,7 @@ const Schedule = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="schedule-header mb-24 text-center">
-          <div className="text-brand-blue/60 font-mono tracking-widest text-xs mb-4 uppercase">Timeline</div>
-          <h2 className="text-3xl md:text-5xl font-display text-white">FLIGHT SCHEDULE</h2>
+          <h2 className="text-3xl md:text-5xl font-display text-white">TIMELINE</h2>
         </div>
 
         <div className="schedule-track relative">
