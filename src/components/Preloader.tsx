@@ -101,16 +101,16 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       }, 200); // 200ms left-to-right stagger
     };
 
-    // 3. Trigger on Image Load
-    const heroImgUrl = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80";
-    const img = new Image();
-    img.src = heroImgUrl;
+    // 3. Trigger on Video Load
+    const video = document.createElement('video');
+    video.src = "/assets/hero-bg.mp4";
+    video.preload = "auto";
     
-    if (img.complete) {
+    if (video.readyState >= 3) {
       setTimeout(startResolve, 800);
     } else {
-      img.onload = startResolve;
-      img.onerror = startResolve;
+      video.oncanplay = startResolve;
+      video.onerror = startResolve;
     }
 
     const timeout = setTimeout(startResolve, 5000);
@@ -163,4 +163,6 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     </div>
   );
 }
+
+
 
