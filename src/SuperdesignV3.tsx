@@ -25,20 +25,7 @@ export default function SuperdesignV3() {
     };
     window.addEventListener('mousemove', onMouseMove);
 
-    // Hero Stagger Animations
-    const tl = gsap.timeline();
-    tl.to('.hero-title span span', {
-      y: 0,
-      duration: 1.5,
-      ease: "power4.out",
-      stagger: 0.2
-    }).to('.hero-stagger', {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power3.out",
-      stagger: 0.1
-    }, "-=1");
+    
 
     // Parallax Effects
     gsap.utils.toArray('.parallax-image').forEach(img => {
@@ -651,6 +638,10 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
+
 
 
 
