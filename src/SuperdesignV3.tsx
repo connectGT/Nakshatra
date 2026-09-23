@@ -309,8 +309,16 @@ export default function SuperdesignV3() {
           </div>
           
           <div className="relative group">
-            <div className="aspect-[4/5] bg-gray-900 overflow-hidden shadow-[40px_40px_0px_0px_rgba(230,57,70,0.1)] transition-transform duration-700 group-hover:scale-95">
-              <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&q=80" alt="Rocket" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110" />
+            <div className="overflow-hidden shadow-[40px_40px_0px_0px_rgba(230,57,70,0.1)] transition-transform duration-700 group-hover:scale-95">
+              <iframe
+                src="https://www.instagram.com/reel/DdonymVsPTC/embed/"
+                className="w-full"
+                style={{ minHeight: '560px', border: 'none' }}
+                scrolling="no"
+                allowTransparency={true}
+                allow="encrypted-media"
+                loading="lazy"
+              />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-red-600 text-white p-8 md:p-12 hidden md:block rotate-3 group-hover:rotate-0 transition-transform duration-500">
               <p className="font-heading text-5xl font-black">2026</p>
