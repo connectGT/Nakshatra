@@ -1,7 +1,5 @@
 // @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
-import LokiText from './components/LokiText';
-import TypewriterText from './components/TypewriterText';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -208,7 +206,11 @@ export default function SuperdesignV3() {
       <a href="#timeline" id="mob-nav-timeline" className="font-heading text-4xl font-black text-white hover:text-red-500">Timeline</a>
       <a href="#rewards" id="mob-nav-rewards" className="font-heading text-4xl font-black text-white hover:text-red-500">Rewards</a>
       <a href="#register" id="mob-nav-reg" className="mt-8 bg-red-600 px-10 py-4 font-bold uppercase tracking-widest">Register Now</a>
-    </div>
+        <div className="flex gap-8 mt-12">
+          <a href="https://www.instagram.com/aerospace.mits/" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-red-500 text-4xl transition-all"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+          <a href="https://www.linkedin.com/in/aerospace-club-mits/" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-red-500 text-4xl transition-all"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+        </div>
+      </div>
 
     {/*  Hero Section  */}
     <section className="relative h-screen flex items-center justify-center overflow-hidden perspective-1000">
@@ -593,10 +595,9 @@ export default function SuperdesignV3() {
               An aerospace pioneering initiative by the Aerospace Club, MITS Gwalior. Pushing student boundaries toward the final frontier.
             </p>
             <div className="flex gap-8">
-              <a href="#" id="social-ig" className="text-white/30 hover:text-red-600 text-3xl transition-all hover:-translate-y-1"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
-              <a href="#" id="social-li" className="text-white/30 hover:text-red-600 text-3xl transition-all hover:-translate-y-1"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
-              <a href="#" id="social-tw" className="text-white/30 hover:text-red-600 text-3xl transition-all hover:-translate-y-1"><iconify-icon icon="mdi:twitter"></iconify-icon></a>
-            </div>
+                <a href="https://www.instagram.com/aerospace.mits/" target="_blank" rel="noopener noreferrer" id="social-ig" className="text-white/30 hover:text-red-600 text-3xl transition-all hover:-translate-y-1"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+                <a href="https://www.linkedin.com/in/aerospace-club-mits/" target="_blank" rel="noopener noreferrer" id="social-li" className="text-white/30 hover:text-red-600 text-3xl transition-all hover:-translate-y-1"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+              </div>
           </div>
           
           <div>
@@ -642,6 +643,12 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
+
+
+
 
 
 
