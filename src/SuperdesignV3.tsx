@@ -711,17 +711,11 @@ export default function SuperdesignV3() {
         </div>
 
         <div className="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-white/10 text-[10px] uppercase font-black tracking-[0.4em]">
-            © 2026 Aerospace Club MITS. Ground Control Systems Active.
-          </p>
           <div className="flex gap-10">
             <a href="#faq" id="legal-privacy" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Privacy</a>
             <a href="#faq" id="legal-terms" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Terms</a>
             <a href="#faq" id="legal-conduct" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Conduct</a>
           </div>
-        </div>
-
-        <div className="mt-6 flex justify-center">
           <a
             href="https://www.instagram.com/shy__guru/"
             target="_blank"
