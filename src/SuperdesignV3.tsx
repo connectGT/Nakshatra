@@ -23,7 +23,20 @@ export default function SuperdesignV3() {
     };
     window.addEventListener('mousemove', onMouseMove);
 
-    
+    // Hero Stagger Animations
+    const tl = gsap.timeline({ delay: 0.2 });
+    tl.to('.hero-title span span', {
+      y: 0,
+      duration: 1.5,
+      ease: "power4.out",
+      stagger: 0.2
+    }).to('.hero-stagger', {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.1
+    }, "-=1");
 
     // Parallax Effects
     gsap.utils.toArray('.parallax-image').forEach(img => {
@@ -232,18 +245,18 @@ export default function SuperdesignV3() {
             <p className="hero-stagger text-xl md:text-3xl font-bold tracking-[0.4em] text-white drop-shadow-2xl">THE AEROSPACE HACKATHON 2026</p>
           </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 hero-stagger opacity-0">
-          <div className="group cursor-pointer bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl px-8 py-4 hover:bg-black/60 hover:border-white/20 transition-all shadow-2xl">
-            <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] block mb-1 font-black drop-shadow-md">Location</span>
-            <span className="font-bold text-lg text-white drop-shadow-lg group-hover:text-red-400 transition-colors">MITS, Gwalior</span>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-12 hero-stagger opacity-0">
+          <div className="group cursor-pointer">
+            <span className="text-white/40 text-[9px] uppercase tracking-widest block mb-2">Location</span>
+            <span className="font-bold text-lg border-b border-red-500 pb-1 group-hover:text-red-500 transition-colors">MITS, Gwalior</span>
           </div>
-          <div className="group cursor-pointer bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl px-8 py-4 hover:bg-black/60 hover:border-white/20 transition-all shadow-2xl">
-            <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] block mb-1 font-black drop-shadow-md">Capacity</span>
-            <span className="font-bold text-lg text-white drop-shadow-lg group-hover:text-red-400 transition-colors">2-4 Members</span>
+          <div className="group cursor-pointer">
+            <span className="text-white/40 text-[9px] uppercase tracking-widest block mb-2">Capacity</span>
+            <span className="font-bold text-lg border-b border-red-500 pb-1 group-hover:text-red-500 transition-colors">2-4 Members</span>
           </div>
-          <div className="group cursor-pointer bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl px-8 py-4 hover:bg-black/60 hover:border-white/20 transition-all shadow-2xl">
-            <span className="text-white/60 text-[10px] uppercase tracking-[0.2em] block mb-1 font-black drop-shadow-md">Domains</span>
-            <span className="font-bold text-lg text-white drop-shadow-lg group-hover:text-red-400 transition-colors">SW + HW</span>
+          <div className="group cursor-pointer">
+            <span className="text-white/40 text-[9px] uppercase tracking-widest block mb-2">Domains</span>
+            <span className="font-bold text-lg border-b border-red-500 pb-1 group-hover:text-red-500 transition-colors">SW + HW</span>
           </div>
         </div>
 
