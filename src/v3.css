@@ -60,7 +60,7 @@
       90% { transform: translate(-10%, 10%); }
     }
 
-    .fluid-h1 { font-size: clamp(3.5rem, 12vw, 12rem); }
+    .fluid-h1 { font-size: clamp(2rem, 12vw, 12rem); }
     .fluid-h2 { font-size: clamp(2.5rem, 8vw, 6rem); }
     .fluid-text { font-size: clamp(1rem, 2vw, 1.25rem); }
 
@@ -145,3 +145,5 @@ video::-webkit-media-controls-play-button {
   opacity: 0 !important;
   -webkit-appearance: none;
 }
+
+

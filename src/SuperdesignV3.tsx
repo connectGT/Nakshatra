@@ -180,7 +180,7 @@ export default function SuperdesignV3() {
   <div id="custom-cursor" className="custom-cursor hidden md:block"></div>
   <div id="custom-cursor-follower" className="custom-cursor-follower hidden md:block"></div>
 
-  <div id="superdesign-root" className="min-h-screen relative">
+  <div id="superdesign-root" className="min-h-screen relative overflow-x-hidden w-full max-w-[100vw]">
     {/*  Navigation  */}
     <nav className="fixed top-0 w-full z-[100] py-6 px-6 md:px-12 flex justify-between items-center transition-all duration-500" id="main-nav">
       <div className="flex items-center gap-4 md:gap-6"><img src="/assets/brand/nakshatra-logo.png" alt="Nakshatra Hackathon" className="h-10 md:h-12 w-auto transition-transform hover:scale-110 duration-500" /><div className="w-[1px] h-8 bg-white/30 hidden md:block"></div><img src="/assets/brand/club_logo.png" alt="Aerospace Club" className="h-10 md:h-12 w-auto transition-transform hover:scale-110 duration-500" /></div>
@@ -656,6 +656,7 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
 
 
 
