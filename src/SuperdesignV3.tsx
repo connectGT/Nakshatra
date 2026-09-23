@@ -272,14 +272,14 @@ export default function SuperdesignV3() {
           <div className="mt-6 md:mt-8 hero-stagger opacity-0 flex flex-col items-center justify-center relative z-50">
             <span className="text-white/40 text-[8px] uppercase tracking-[0.3em] font-bold mb-1">Powered By</span>
             <div className="flex items-center gap-2 text-white">
-              <span className="font-bold text-lg tracking-tight">Unstop</span>
+              <img src="/assets/unstop-logo.svg" className="h-4 md:h-5 invert opacity-90" alt="Unstop" />
             </div>
           </div>
       </div>
       
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
+      <div className="absolute bottom-1 md:bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
         <span className="text-[9px] uppercase tracking-[0.5em] mb-4">Initiate Descent</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+        <div className="w-[1px] h-6 md:h-12 bg-gradient-to-b from-white to-transparent"></div>
       </div>
     </section>
 
@@ -295,9 +295,7 @@ export default function SuperdesignV3() {
             <p className="fluid-text leading-relaxed text-gray-800 mb-10 font-medium">
               NAKSHATRA is an aerospace-focused hackathon organised by the Aerospace Club, Madhav Institute of Technology & Science (MITS), Gwalior, bringing together students to innovate and solve real-world challenges across space, astronomy, aeronautics, and aerospace technology.
             </p>
-            <p className="text-lg leading-relaxed text-gray-700 md:pr-12">
-              We provide a stellar platform for engineering minds to develop high-impact solutions through two specialized orbits: Software and Hardware. Join the ranks of future space innovators.
-            </p>
+            
             <div className="mt-16 flex gap-12">
               <div>
                 <span className="block font-heading text-4xl font-black text-black">50+</span>
@@ -698,6 +696,8 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
 
 
 
