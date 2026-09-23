@@ -136,3 +136,12 @@
       stroke-dashoffset: 1000;
     }
   
+
+/* Hide Mobile Video Play Button (Low Power Mode / Data Saver) */
+video::-webkit-media-controls,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  -webkit-appearance: none;
+}
