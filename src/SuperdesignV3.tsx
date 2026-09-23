@@ -541,6 +541,13 @@ export default function SuperdesignV3() {
                 <img src="/assets/unstop-logo.png" className="h-10 md:h-14" alt="Unstop" />
               </a>
             </div>
+
+            <div className="flex items-center gap-4 mt-8">
+              <div className="flex-1 h-[1px] bg-white/10 max-w-[80px]"></div>
+              <span className="text-white/20 text-[9px] uppercase tracking-[0.4em] font-bold whitespace-nowrap">More Partners Coming Soon</span>
+              <div className="flex-1 h-[1px] bg-white/10 max-w-[80px]"></div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -712,6 +719,7 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
 
 
 
