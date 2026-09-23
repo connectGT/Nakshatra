@@ -213,10 +213,10 @@ export default function SuperdesignV3() {
       </div>
 
     {/*  Hero Section  */}
-    <section className="relative h-screen flex items-center justify-center overflow-hidden perspective-1000">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80 z-10"></div>
-        <video src="/assets/hero-bg.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover scale-110 parallax-image" id="hero-bg-video" />
+        <video src="/assets/hero-bg.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" id="hero-bg-video" />
       </div>
       
       <div className="relative z-20 text-center w-full px-6">
@@ -643,6 +643,8 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
 
 
 
