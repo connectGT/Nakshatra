@@ -282,7 +282,7 @@ export default function SuperdesignV3() {
             </h2>
             <div className="w-32 h-[3px] bg-red-600 mb-12"></div>
             <p className="fluid-text leading-relaxed text-gray-800 mb-10 font-medium">
-              NAKSHATRA is an aerospace-focused odyssey organized by the Aerospace Club, Madhav Institute of Technology & Science (MITS), Gwalior.
+              NAKSHATRA is an aerospace-focused hackathon organised by the Aerospace Club, Madhav Institute of Technology & Science (MITS), Gwalior, bringing together students to innovate and solve real-world challenges across space, astronomy, aeronautics, and aerospace technology.
             </p>
             <p className="text-lg leading-relaxed text-gray-700 md:pr-12">
               We provide a stellar platform for engineering minds to develop high-impact solutions through two specialized orbits: Software and Hardware. Join the ranks of future space innovators.
@@ -349,7 +349,7 @@ export default function SuperdesignV3() {
           </div>
           <div className="bg-white/5 border border-white/10 p-6 md:p-8 backdrop-blur-xl">
             <p className="text-white/60 text-sm uppercase tracking-widest font-bold mb-2">Status</p>
-            <p className="text-red-500 font-black tracking-tighter text-2xl">COMING SOON</p>
+            <p className="text-red-500 font-black tracking-tighter text-2xl">LIVE NOW</p>
           </div>
         </div>
 
@@ -373,17 +373,23 @@ export default function SuperdesignV3() {
                 Architect the digital future of aerospace. From AI-driven orbital mechanics to real-time satellite telemetry analysis.
               </p>
               
-              <ul className="space-y-6">
-                <li className="flex items-center gap-4 text-xs font-black tracking-widest text-white/80">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span> SPACE SYSTEMS & DATA
-                </li>
-                <li className="flex items-center gap-4 text-xs font-black tracking-widest text-white/80">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span> AI/ML FOR AEROSPACE
-                </li>
-                <li className="flex items-center gap-4 text-xs font-black tracking-widest text-white/80">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span> SIMULATION ENGINES
-                </li>
-              </ul>
+              <ul className="space-y-4">
+                  <li className="flex items-start gap-4 text-[10px] md:text-xs font-black tracking-widest text-white/80 leading-relaxed">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span> AUTOMATED CLOUD MASKING & RECONSTRUCTION
+                  </li>
+                  <li className="flex items-start gap-4 text-[10px] md:text-xs font-black tracking-widest text-white/80 leading-relaxed">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span> LUNAR SHADOWED REGION MAPPING
+                  </li>
+                  <li className="flex items-start gap-4 text-[10px] md:text-xs font-black tracking-widest text-white/80 leading-relaxed">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span> SPACE DEBRIS DETECTION & MITIGATION
+                  </li>
+                </ul>
+                
+                <div className="mt-12 flex flex-wrap gap-4">
+                  <a href="https://docs.google.com/document/d/1-GPBMiGJCmi2Tsgj4ZvCaMVQ3a0Hq3rsVrP1XZp9ocw/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-block text-[10px] uppercase font-black tracking-[0.2em] text-red-500 hover:text-white border border-red-500/50 hover:border-white px-6 py-3 transition-all">Problem Statements</a>
+                  <a href="https://docs.google.com/presentation/d/12flPwO6In63Y6bIxFFmW_1g4lsdW_W-KyBT_Y-I2wfc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block text-[10px] uppercase font-black tracking-[0.2em] text-red-500 hover:text-white border border-red-500/50 hover:border-white px-6 py-3 transition-all">PPT Format</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdD2Pd_7suCgOjRth4jgFGPOpAcjebbzgNt5tNGxY2DT9-5fA/viewform" target="_blank" rel="noopener noreferrer" className="inline-block text-[10px] uppercase font-black tracking-[0.2em] bg-red-600 text-white hover:bg-white hover:text-black border border-red-600 hover:border-white px-6 py-3 transition-all shadow-[0_0_15px_rgba(230,57,70,0.4)]">Submit PPT</a>
+                </div>
             </div>
           </div>
 
@@ -406,17 +412,23 @@ export default function SuperdesignV3() {
                 Engineer the physical vessels of discovery. Build prototypes for propulsion systems, UAVs, and resilient aerospace electronics.
               </p>
               
-              <ul className="space-y-6">
-                <li className="flex items-center gap-4 text-xs font-black tracking-widest text-white/80">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span> ROCKETRY & PROPULSION
-                </li>
-                <li className="flex items-center gap-4 text-xs font-black tracking-widest text-white/80">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span> UAV DESIGN & AUTONOMY
-                </li>
-                <li className="flex items-center gap-4 text-xs font-black tracking-widest text-white/80">
-                  <span className="w-2 h-2 bg-red-600 rounded-full"></span> EMBEDDED SATELLITE HW
-                </li>
-              </ul>
+              <ul className="space-y-4">
+                  <li className="flex items-start gap-4 text-[10px] md:text-xs font-black tracking-widest text-white/80 leading-relaxed">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span> AUTONOMOUS LUNAR ROVER
+                  </li>
+                  <li className="flex items-start gap-4 text-[10px] md:text-xs font-black tracking-widest text-white/80 leading-relaxed">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span> SATELLITE COMPONENT HEALTH MONITORING
+                  </li>
+                  <li className="flex items-start gap-4 text-[10px] md:text-xs font-black tracking-widest text-white/80 leading-relaxed">
+                    <span className="w-2 h-2 bg-red-600 rounded-full mt-1.5 flex-shrink-0"></span> RADIATION & SPACE-WEATHER MONITOR
+                  </li>
+                </ul>
+                
+                <div className="mt-12 flex flex-wrap gap-4">
+                  <a href="https://docs.google.com/document/d/1-GPBMiGJCmi2Tsgj4ZvCaMVQ3a0Hq3rsVrP1XZp9ocw/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="inline-block text-[10px] uppercase font-black tracking-[0.2em] text-red-500 hover:text-white border border-red-500/50 hover:border-white px-6 py-3 transition-all">Problem Statements</a>
+                  <a href="https://docs.google.com/presentation/d/12flPwO6In63Y6bIxFFmW_1g4lsdW_W-KyBT_Y-I2wfc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block text-[10px] uppercase font-black tracking-[0.2em] text-red-500 hover:text-white border border-red-500/50 hover:border-white px-6 py-3 transition-all">PPT Format</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdD2Pd_7suCgOjRth4jgFGPOpAcjebbzgNt5tNGxY2DT9-5fA/viewform" target="_blank" rel="noopener noreferrer" className="inline-block text-[10px] uppercase font-black tracking-[0.2em] bg-red-600 text-white hover:bg-white hover:text-black border border-red-600 hover:border-white px-6 py-3 transition-all shadow-[0_0_15px_rgba(230,57,70,0.4)]">Submit PPT</a>
+                </div>
             </div>
           </div>
         </div>
@@ -446,7 +458,7 @@ export default function SuperdesignV3() {
                 <p className="text-white/60 text-sm md:text-base max-w-md md:ml-auto leading-relaxed">
                   Assemble your team of 2-4 visionaries. Secure your slot in the grand constellation of aerospace innovators.
                 </p>
-                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">20 SEP - 26 SEP 2026</span>
+                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">20 SEP 26 - 30 SEP 26</span>
               </div>
               <div className="w-8 h-8 rounded-full bg-red-600 absolute left-0 md:left-1/2 -translate-x-1/2 z-20 shadow-[0_0_20px_rgba(230,57,70,0.5)]"></div>
               <div className="hidden md:block w-1/2"></div>
@@ -461,7 +473,7 @@ export default function SuperdesignV3() {
                 <p className="text-white/60 text-sm md:text-base max-w-md leading-relaxed">
                   Detail your proposed solution for Round 1. Cover technical architecture, innovation, and implementation roadmaps.
                 </p>
-                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">30 SEP 2026 DEADLINE</span>
+                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">ROUND 1 PPT SUBMISSION</span>
               </div>
             </div>
 
@@ -472,7 +484,7 @@ export default function SuperdesignV3() {
                 <p className="text-white/60 text-sm md:text-base max-w-md md:ml-auto leading-relaxed">
                   Top 50 crews are selected based on feasibility and creative impact. Prepare for the final on-ground mission.
                 </p>
-                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">15 OCTOBER 2026</span>
+                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">ROUND 1 RESULTS</span>
               </div>
               <div className="w-8 h-8 rounded-full bg-black border-2 border-red-600 absolute left-0 md:left-1/2 -translate-x-1/2 z-20"></div>
               <div className="hidden md:block w-1/2"></div>
@@ -487,7 +499,7 @@ export default function SuperdesignV3() {
                 <p className="text-white/60 text-sm md:text-base max-w-md leading-relaxed">
                   A high-intensity 12-hour build at MITS Campus. From concept to functional reality under the watchful eyes of industry experts.
                 </p>
-                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">24-25 OCTOBER 2026</span>
+                <span className="text-[10px] uppercase font-bold text-white/20 mt-6 block">24 OCT - 25 OCT 2026</span>
               </div>
             </div>
           </div>
@@ -544,37 +556,43 @@ export default function SuperdesignV3() {
           <p className="text-black/40 uppercase tracking-widest text-xs font-bold">FAQ - Frequently Asked Questions</p>
         </div>
 
-        <div className="space-y-6">
-          <details className="group bg-black/5 p-8 transition-all duration-300 hover:bg-black/10 cursor-pointer">
-            <summary className="font-heading text-xl md:text-2xl font-black flex justify-between items-center list-none text-black">
-              WHO CAN JOIN THE CREW?
-              <iconify-icon icon="lucide:plus" className="group-open:rotate-45 transition-transform duration-300 text-red-600"></iconify-icon>
-            </summary>
-            <div className="mt-6 text-gray-700 leading-relaxed max-w-2xl pr-8">
-              Open to all university students across disciplines—Engineering, Sciences, Arts, Management, and beyond. If you have a passion for space, you have a place.
-            </div>
-          </details>
-          
-          <details className="group bg-black/5 p-8 transition-all duration-300 hover:bg-black/10 cursor-pointer">
-            <summary className="font-heading text-xl md:text-2xl font-black flex justify-between items-center list-none text-black">
-              TEAM COMPOSITION?
-              <iconify-icon icon="lucide:plus" className="group-open:rotate-45 transition-transform duration-300 text-red-600"></iconify-icon>
-            </summary>
-            <div className="mt-6 text-gray-700 leading-relaxed max-w-2xl pr-8">
-              Teams must consist of 2 to 4 members. Inter-college and inter-branch collaborations are highly encouraged to foster diverse thinking.
-            </div>
-          </details>
-
-          <details className="group bg-black/5 p-8 transition-all duration-300 hover:bg-black/10 cursor-pointer">
-            <summary className="font-heading text-xl md:text-2xl font-black flex justify-between items-center list-none text-black">
-              THE SELECTION PROCESS?
-              <iconify-icon icon="lucide:plus" className="group-open:rotate-45 transition-transform duration-300 text-red-600"></iconify-icon>
-            </summary>
-            <div className="mt-6 text-gray-700 leading-relaxed max-w-2xl pr-8">
-              Round 1 is a remote PPT submission. Based on innovation and technical depth, 50 teams will be invited to the 12-hour offline hackathon at MITS, Gwalior.
-            </div>
-          </details>
-        </div>
+                  <div className="space-y-6">
+            <details className="group bg-black/5 p-8 transition-all duration-300 hover:bg-black/10 cursor-pointer">
+              <summary className="font-heading text-xl md:text-2xl font-black flex justify-between items-center list-none text-black">
+                ELIGIBILITY: WHO CAN JOIN?
+                <iconify-icon icon="lucide:plus" className="group-open:rotate-45 transition-transform duration-300 text-red-600"></iconify-icon>
+              </summary>
+              <div className="mt-6 text-gray-700 leading-relaxed max-w-2xl pr-8">
+                Open to all college/university students! Including Undergraduate, Postgraduate, Engineering, Management, Arts, Commerce, Sciences, Law, and Medical students. If you have a passion for space, you have a place.
+              </div>
+            </details>
+            
+            <details className="group bg-black/5 p-8 transition-all duration-300 hover:bg-black/10 cursor-pointer">
+              <summary className="font-heading text-xl md:text-2xl font-black flex justify-between items-center list-none text-black">
+                TEAM COMPOSITION & SIZE?
+                <iconify-icon icon="lucide:plus" className="group-open:rotate-45 transition-transform duration-300 text-red-600"></iconify-icon>
+              </summary>
+              <div className="mt-6 text-gray-700 leading-relaxed max-w-2xl pr-8 space-y-2">
+                <p>• Team Size: 2-4 members.</p>
+                <p>• Inter-college teams are completely allowed.</p>
+                <p>• Inter-branch/inter-specialisation teams are encouraged.</p>
+                <p>• Each participant can be a member of only ONE team.</p>
+              </div>
+            </details>
+            
+            <details className="group bg-black/5 p-8 transition-all duration-300 hover:bg-black/10 cursor-pointer">
+              <summary className="font-heading text-xl md:text-2xl font-black flex justify-between items-center list-none text-black">
+                SUBMISSION & RULES
+                <iconify-icon icon="lucide:plus" className="group-open:rotate-45 transition-transform duration-300 text-red-600"></iconify-icon>
+              </summary>
+              <div className="mt-6 text-gray-700 leading-relaxed max-w-2xl pr-8 space-y-2">
+                <p>• Teams must select and work on ONE problem statement only.</p>
+                <p>• The submitted solution must be the original work of the team.</p>
+                <p>• Teams must complete the registration form and submit their PPT before the deadline to be considered.</p>
+                <p>• Shortlisted teams must participate in the offline Final Hackathon at MITS, Gwalior.</p>
+              </div>
+            </details>
+          </div>
       </div>
     </section>
 
@@ -656,6 +674,7 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
 
 
 
