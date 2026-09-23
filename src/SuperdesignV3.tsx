@@ -310,14 +310,14 @@ export default function SuperdesignV3() {
           
           <div className="relative group">
             <div className="overflow-hidden shadow-[40px_40px_0px_0px_rgba(230,57,70,0.1)] transition-transform duration-700 group-hover:scale-95">
-              <iframe
-                src="https://www.instagram.com/reel/DdonymVsPTC/embed/"
-                className="w-full"
-                style={{ minHeight: '560px', border: 'none' }}
-                scrolling="no"
-                allowTransparency={true}
-                allow="encrypted-media"
-                loading="lazy"
+              <video
+                src="/assets/about-reel.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full object-cover"
+                style={{ maxHeight: '620px' }}
               />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-red-600 text-white p-8 md:p-12 hidden md:block rotate-3 group-hover:rotate-0 transition-transform duration-500">
