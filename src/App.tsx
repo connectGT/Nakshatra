@@ -1,23 +1,12 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import WhyParticipate from './components/WhyParticipate';
-import Challenges from './components/Challenges';
-import Timeline from './components/Timeline';
-import Rewards from './components/Rewards';
-import Criteria from './components/Criteria';
-import FAQ from './components/FAQ';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
+import SuperdesignV3 from './SuperdesignV3';
 
-// @ts-nocheck
 export default function App() {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       wheelMultiplier: 1,
@@ -28,7 +17,6 @@ export default function App() {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
 
     return () => {
@@ -36,22 +24,5 @@ export default function App() {
     };
   }, []);
 
-  return (
-    <>
-      <div className="noise-overlay"></div>
-      <div className="main-frame bg-[#242323] relative w-full overflow-hidden">
-        <Navbar />
-      <Hero />
-      <About />
-      <WhyParticipate />
-      <Challenges />
-      <Timeline />
-      <Rewards />
-      <Criteria />
-      <FAQ />
-      <FinalCTA />
-      <Footer />
-    </div>
-    </>
-  );
+  return <SuperdesignV3 />;
 }
