@@ -78,6 +78,7 @@
     }
 
     .custom-cursor {
+    pointer-events: none;
       width: 20px;
       height: 20px;
       border: 1px solid rgba(255,255,255,0.5);
@@ -89,6 +90,7 @@
     }
 
     .custom-cursor-follower {
+    pointer-events: none;
       width: 8px;
       height: 8px;
       background: var(--color-primary);
@@ -145,5 +147,6 @@ video::-webkit-media-controls-play-button {
   opacity: 0 !important;
   -webkit-appearance: none;
 }
+
 
 

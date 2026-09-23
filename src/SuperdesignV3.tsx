@@ -261,8 +261,8 @@ export default function SuperdesignV3() {
         </div>
 
         <div className="mt-10 md:mt-20 flex flex-wrap justify-center gap-4 md:gap-8 hero-stagger opacity-0">
-          <a href="https://unstop.com/p/nakshatra-the-aerospace-hackathon-2026-madhav-institute-of-technology-and-science-mits-gwalior-1751540" target="_blank" rel="noopener noreferrer" id="cta-hero-primary" className="bg-red-600 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl hover:-translate-y-2">Register Now</a>
-          <a href="#" id="cta-hero-secondary" className="backdrop-blur-md border border-white/20 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 hover:-translate-y-2">Explore Challenges</a>
+          <a href="https://unstop.com/p/nakshatra-the-aerospace-hackathon-2026-madhav-institute-of-technology-and-science-mits-gwalior-1751540" target="_blank" rel="noopener noreferrer" id="cta-hero-primary" className="relative z-50 bg-red-600 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl md:hover:-translate-y-2">Register Now</a>
+          <a href="#" id="cta-hero-secondary" className="relative z-50 backdrop-blur-md border border-white/20 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 md:hover:-translate-y-2">Explore Challenges</a>
         </div>
       </div>
       
@@ -656,6 +656,9 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
 
 
 
