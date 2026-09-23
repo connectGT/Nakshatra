@@ -156,14 +156,11 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             <span className="text-[9px] uppercase tracking-widest block mb-2">Location</span>
             <span className="font-bold text-lg pb-1">MITS, Gwalior</span>
           </div>
-          <div className="group">
-            <span className="text-[9px] uppercase tracking-widest block mb-2">Date</span>
-            <span className="font-bold text-lg pb-1">OCTOBER 2026</span>
-          </div>
-        </div>
+          <div className="group"><span className="text-[9px] uppercase tracking-widest block mb-2">Date</span><span className="font-bold text-lg pb-1">OCTOBER 2026</span></div></div><div className="mt-20 flex flex-wrap justify-center gap-8 opacity-0 pointer-events-none"><a href="#" className="bg-red-600 px-12 py-5 font-black text-[11px] uppercase tracking-[0.2em]">Register Now</a><a href="#" className="border border-white/20 px-12 py-5 font-black text-[11px] uppercase tracking-[0.2em]">Explore Challenges</a></div>
 
       </div>
 
     </div>
   );
 }
+
