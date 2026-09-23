@@ -247,11 +247,11 @@ export default function SuperdesignV3() {
 
         <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center gap-6 md:gap-16 mt-8 md:mt-12 hero-stagger opacity-0">
           <div className="group cursor-pointer">
-            <div className="group cursor-pointer">
               <span className="text-white/40 text-[9px] uppercase tracking-widest block mb-2">Date</span>
               <span className="font-bold text-lg border-b border-red-500 pb-1 group-hover:text-red-500 transition-colors">24-25 Oct</span>
             </div>
-            <span className="text-white/40 text-[9px] uppercase tracking-widest block mb-2">Location</span>
+            <div className="group cursor-pointer">
+              <span className="text-white/40 text-[9px] uppercase tracking-widest block mb-2">Location</span>
             <span className="font-bold text-lg border-b border-red-500 pb-1 group-hover:text-red-500 transition-colors">MITS, Gwalior</span>
           </div>
           <div className="group cursor-pointer">
