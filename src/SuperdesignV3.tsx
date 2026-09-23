@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
-import Preloader from './components/Preloader';
+import LokiText from './components/LokiText';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -175,8 +175,7 @@ export default function SuperdesignV3() {
   }, []);
 
   return (
-    <div ref={containerRef} className="text-white bg-[#0a0a0c]">
-      {showPreloader && <Preloader onComplete={() => setShowPreloader(false)} />}
+    <div ref={containerRef} className="text-white bg-[#0a0a0c]"><div className={`fixed inset-0 bg-[#0a0a0c] z-[105] transition-opacity duration-1000 ${showPreloader ? "opacity-100" : "opacity-0 pointer-events-none"}`}></div>
       
   <div id="custom-cursor" className="custom-cursor hidden md:block"></div>
   <div id="custom-cursor-follower" className="custom-cursor-follower hidden md:block"></div>
@@ -234,9 +233,7 @@ export default function SuperdesignV3() {
           <p className="hero-stagger text-red-500 font-bold uppercase tracking-[0.8em] text-[10px] md:text-xs">EROSPACE PRESENTS</p>
         </div>
         
-        <h1 className="font-heading fluid-h1 font-black mb-6 leading-[0.85] text-white flex flex-col items-center hero-title">
-          <span className="overflow-hidden block"><span className="inline-block translate-y-full">NAKSHATRA</span></span>
-        </h1>
+        <h1 className={`font-heading fluid-h1 font-black mb-6 leading-[0.85] text-white flex flex-col items-center hero-title relative ${showPreloader ? "z-[110]" : "z-auto"}`}><LokiText text="NAKSHATRA" onComplete={() => setShowPreloader(false)} /></h1>
         
         <div className="overflow-hidden mb-12">
           <p className="hero-stagger text-xl md:text-4xl font-light tracking-[0.2em] text-white/60">THE AEROSPACE HACKATHON 2026</p>
@@ -654,6 +651,13 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
+
+
+
+
 
 
 
