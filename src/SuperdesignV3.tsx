@@ -262,7 +262,7 @@ export default function SuperdesignV3() {
 
         <div className="mt-10 md:mt-20 flex flex-wrap justify-center gap-4 md:gap-8 hero-stagger opacity-0">
           <a href="https://unstop.com/hackathons/nakshatra-the-aerospace-hackathon-2026-madhav-institute-of-technology-and-science-mits-gwalior-1751540" target="_blank" rel="noopener noreferrer" id="cta-hero-primary" className="relative z-50 bg-red-600 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl md:hover:-translate-y-2">Register Now</a>
-          <a href="#" id="cta-hero-secondary" className="relative z-50 backdrop-blur-md border border-white/20 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 md:hover:-translate-y-2">Explore Challenges</a>
+          <a href="#tracks" id="cta-hero-secondary" className="relative z-50 backdrop-blur-md border border-white/20 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 md:hover:-translate-y-2">Explore Challenges</a>
         </div>
       </div>
       
@@ -593,7 +593,7 @@ export default function SuperdesignV3() {
         </p>
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-8">
           <a href="https://unstop.com/hackathons/nakshatra-the-aerospace-hackathon-2026-madhav-institute-of-technology-and-science-mits-gwalior-1751540" target="_blank" rel="noopener noreferrer" id="final-cta-primary" className="bg-red-600 px-16 py-6 font-black text-xs uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500 shadow-[0_20px_60px_-15px_rgba(230,57,70,0.5)]">Register Now</a>
-          <a href="#" id="final-cta-secondary" className="backdrop-blur-xl border border-white/20 px-16 py-6 font-black text-xs uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500">Event Deck</a>
+          <a href="#rewards" id="final-cta-secondary" className="backdrop-blur-xl border border-white/20 px-16 py-6 font-black text-xs uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500">See Rewards</a>
         </div>
       </div>
     </section>
@@ -644,9 +644,9 @@ export default function SuperdesignV3() {
             © 2026 Aerospace Club MITS. Ground Control Systems Active.
           </p>
           <div className="flex gap-10">
-            <a href="#" id="legal-privacy" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Privacy</a>
-            <a href="#" id="legal-terms" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Terms</a>
-            <a href="#" id="legal-conduct" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Conduct</a>
+            <a href="#faq" id="legal-privacy" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Privacy</a>
+            <a href="#faq" id="legal-terms" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Terms</a>
+            <a href="#faq" id="legal-conduct" className="text-white/10 hover:text-white transition-colors text-[9px] uppercase font-black tracking-[0.3em]">Conduct</a>
           </div>
         </div>
       </div>
@@ -656,6 +656,9 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
 
 
 
