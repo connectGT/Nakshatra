@@ -266,9 +266,9 @@ export default function SuperdesignV3() {
         </div>
       </div>
       
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
         <span className="text-[9px] uppercase tracking-[0.5em] mb-4">Initiate Descent</span>
-        <div className="w-[1px] h-20 bg-gradient-to-b from-white to-transparent"></div>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
       </div>
     </section>
 
