@@ -232,20 +232,20 @@ export default function SuperdesignV3() {
         <video src="/assets/hero-bg.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" id="hero-bg-video" />
       </div>
       
-      <div className="relative z-20 text-center w-full px-6">
-        <div className="mb-8 overflow-hidden">
+      <div className="relative z-20 text-center w-full px-6 pt-24 md:pt-0">
+        <div className="mb-4 md:mb-8 overflow-hidden">
           <p className="hero-stagger text-red-500 font-bold uppercase tracking-[0.8em] text-[10px] md:text-xs">AEROSPACE PRESENTS</p>
         </div>
         
-        <h1 className="font-heading fluid-h1 font-black mb-6 leading-[0.85] text-white flex flex-col items-center hero-title">
+        <h1 className="font-heading fluid-h1 font-black mb-2 md:mb-6 leading-[0.85] text-white flex flex-col items-center hero-title">
             <span className="overflow-hidden block"><span className="inline-block translate-y-full">NAKSHATRA</span></span>
           </h1>
         
-        <div className="overflow-hidden mb-12">
+        <div className="overflow-hidden mb-8 md:mb-12">
             <p className="hero-stagger text-xl md:text-3xl font-bold tracking-[0.4em] text-white drop-shadow-2xl">THE AEROSPACE HACKATHON 2026</p>
           </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-12 hero-stagger opacity-0">
+        <div className="flex flex-row flex-wrap md:flex-nowrap items-center justify-center gap-6 md:gap-16 mt-8 md:mt-12 hero-stagger opacity-0">
           <div className="group cursor-pointer">
             <span className="text-white/40 text-[9px] uppercase tracking-widest block mb-2">Location</span>
             <span className="font-bold text-lg border-b border-red-500 pb-1 group-hover:text-red-500 transition-colors">MITS, Gwalior</span>
@@ -260,9 +260,9 @@ export default function SuperdesignV3() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-wrap justify-center gap-8 hero-stagger opacity-0">
-          <a href="#" id="cta-hero-primary" className="bg-red-600 px-8 py-4 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl hover:-translate-y-2">Register Now</a>
-          <a href="#" id="cta-hero-secondary" className="backdrop-blur-md border border-white/20 px-8 py-4 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 hover:-translate-y-2">Explore Challenges</a>
+        <div className="mt-10 md:mt-20 flex flex-wrap justify-center gap-4 md:gap-8 hero-stagger opacity-0">
+          <a href="#" id="cta-hero-primary" className="bg-red-600 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl hover:-translate-y-2">Register Now</a>
+          <a href="#" id="cta-hero-secondary" className="backdrop-blur-md border border-white/20 px-6 py-3 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 hover:-translate-y-2">Explore Challenges</a>
         </div>
       </div>
       
@@ -656,6 +656,13 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
+
+
+
+
 
 
 
