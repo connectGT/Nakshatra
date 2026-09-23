@@ -164,7 +164,7 @@ export default function SuperdesignV3() {
   }, []);
 
   return (
-    <div ref={containerRef} className="text-white bg-[#0a0a0c]"><div className={`fixed inset-0 bg-[#0a0a0c] z-[105] transition-opacity duration-1000 ${showPreloader ? "opacity-100" : "opacity-0 pointer-events-none"}`}></div>
+    <div ref={containerRef} className="text-white bg-[#0a0a0c]">
       
   <div id="custom-cursor" className="custom-cursor hidden md:block"></div>
   <div id="custom-cursor-follower" className="custom-cursor-follower hidden md:block"></div>
@@ -222,9 +222,13 @@ export default function SuperdesignV3() {
           <p className="hero-stagger text-red-500 font-bold uppercase tracking-[0.8em] text-[10px] md:text-xs">AEROSPACE PRESENTS</p>
         </div>
         
-        <h1 className={`font-heading fluid-h1 font-black mb-6 leading-[0.85] text-white flex flex-col items-center hero-title relative ${showPreloader ? "z-[110]" : "z-auto"}`}><LokiText text="NAKSHATRA" onComplete={() => setLokiDone(true)} /></h1>
+        <h1 className="font-heading fluid-h1 font-black mb-6 leading-[0.85] text-white flex flex-col items-center hero-title">
+            <span className="overflow-hidden block"><span className="inline-block translate-y-full">NAKSHATRA</span></span>
+          </h1>
         
-        <div className={`mb-12 relative ${showPreloader ? "z-[110]" : "z-auto"}`}><TypewriterText text="THE AEROSPACE HACKATHON 2026" start={lokiDone} onComplete={() => setShowPreloader(false)} className="text-xl md:text-3xl font-bold tracking-[0.4em] text-white drop-shadow-2xl" /></div>
+        <div className="overflow-hidden mb-12">
+            <p className="hero-stagger text-xl md:text-3xl font-bold tracking-[0.4em] text-white drop-shadow-2xl">THE AEROSPACE HACKATHON 2026</p>
+          </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 hero-stagger opacity-0">
           <div className="group cursor-pointer bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl px-8 py-4 hover:bg-black/60 hover:border-white/20 transition-all shadow-2xl">
@@ -638,6 +642,17 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
