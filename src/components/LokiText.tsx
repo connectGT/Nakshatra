@@ -83,7 +83,7 @@ export default function LokiText({ text, onComplete }: LokiTextProps) {
     video.preload = "auto";
     
     if (video.readyState >= 3) {
-      setTimeout(startResolve, 800);
+      setTimeout(startResolve, 1500);
     } else {
       video.oncanplay = startResolve;
       video.onerror = startResolve;
@@ -113,4 +113,5 @@ export default function LokiText({ text, onComplete }: LokiTextProps) {
     </span>
   );
 }
+
 

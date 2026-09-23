@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 import LokiText from './components/LokiText';
+import TypewriterText from './components/TypewriterText';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function SuperdesignV3() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [showPreloader, setShowPreloader] = useState(true);
+  const [lokiDone, setLokiDone] = useState(false);
 
   useGSAP(() => {
     // Custom Cursor
@@ -230,14 +232,12 @@ export default function SuperdesignV3() {
       
       <div className="relative z-20 text-center w-full px-6">
         <div className="mb-8 overflow-hidden">
-          <p className="hero-stagger text-red-500 font-bold uppercase tracking-[0.8em] text-[10px] md:text-xs">EROSPACE PRESENTS</p>
+          <p className="hero-stagger text-red-500 font-bold uppercase tracking-[0.8em] text-[10px] md:text-xs">AEROSPACE PRESENTS</p>
         </div>
         
-        <h1 className={`font-heading fluid-h1 font-black mb-6 leading-[0.85] text-white flex flex-col items-center hero-title relative ${showPreloader ? "z-[110]" : "z-auto"}`}><LokiText text="NAKSHATRA" onComplete={() => setShowPreloader(false)} /></h1>
+        <h1 className={`font-heading fluid-h1 font-black mb-6 leading-[0.85] text-white flex flex-col items-center hero-title relative ${showPreloader ? "z-[110]" : "z-auto"}`}><LokiText text="NAKSHATRA" onComplete={() => setLokiDone(true)} /></h1>
         
-        <div className="overflow-hidden mb-12">
-          <p className="hero-stagger text-xl md:text-4xl font-light tracking-[0.2em] text-white/60">THE AEROSPACE HACKATHON 2026</p>
-        </div>
+        <div className={`mb-12 relative ${showPreloader ? "z-[110]" : "z-auto"}`}><TypewriterText text="THE AEROSPACE HACKATHON 2026" start={lokiDone} onComplete={() => setShowPreloader(false)} className="text-xl md:text-3xl font-bold tracking-[0.4em] text-white drop-shadow-2xl" /></div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-12 hero-stagger opacity-0">
           <div className="group cursor-pointer">
@@ -651,6 +651,13 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
+
+
+
+
 
 
 
