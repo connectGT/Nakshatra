@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
 .main-frame {
@@ -122,3 +122,5 @@ html { scroll-behavior: smooth; }
     transition-duration: 0.01ms !important;
   }
 }
+
+

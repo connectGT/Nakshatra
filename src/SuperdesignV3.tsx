@@ -210,7 +210,7 @@ export default function SuperdesignV3() {
     </nav>
 
     {/*  Mobile Drawer  */}
-    <div id="mobile-drawer" className="fixed inset-0 z-[110] bg-black/95 flex flex-col items-center justify-center gap-8 lg:hidden">
+    <div id="mobile-drawer" className="fixed inset-0 z-[120] bg-black/95 flex flex-col items-center justify-center gap-8 lg:hidden">
       <button id="close-drawer" className="absolute top-8 right-8 text-white text-4xl">
         <iconify-icon icon="lucide:x"></iconify-icon>
       </button>
@@ -255,8 +255,8 @@ export default function SuperdesignV3() {
         </div>
 
         <div className="mt-20 flex flex-wrap justify-center gap-8 hero-stagger opacity-0">
-          <a href="#" id="cta-hero-primary" className="bg-red-600 px-12 py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl hover:-translate-y-2">Register Now</a>
-          <a href="#" id="cta-hero-secondary" className="backdrop-blur-md border border-white/20 px-12 py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 hover:-translate-y-2">Explore Challenges</a>
+          <a href="#" id="cta-hero-primary" className="bg-red-600 px-8 py-4 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl hover:-translate-y-2">Register Now</a>
+          <a href="#" id="cta-hero-secondary" className="backdrop-blur-md border border-white/20 px-8 py-4 md:px-12 md:py-5 font-black text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 hover:-translate-y-2">Explore Challenges</a>
         </div>
       </div>
       
@@ -435,7 +435,7 @@ export default function SuperdesignV3() {
           <div className="space-y-32">
             {/*  Step 1  */}
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-12 md:gap-24 scroll-reveal-step">
-              <div className="w-full md:w-1/2 md:text-right md:pr-12 group">
+              <div className="w-full md:w-1/2 md:text-right pl-12 md:pl-0 md:pr-12 group">
                 <span className="text-red-600 font-heading text-lg font-black block mb-4 group-hover:tracking-[0.2em] transition-all">01. REGISTRATION</span>
                 <p className="text-white/60 text-sm md:text-base max-w-md md:ml-auto leading-relaxed">
                   Assemble your team of 2-4 visionaries. Secure your slot in the grand constellation of aerospace innovators.
@@ -450,7 +450,7 @@ export default function SuperdesignV3() {
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-12 md:gap-24 scroll-reveal-step">
               <div className="hidden md:block w-1/2"></div>
               <div className="w-8 h-8 rounded-full bg-black border-2 border-red-600 absolute left-0 md:left-1/2 -translate-x-1/2 z-20"></div>
-              <div className="w-full md:w-1/2 md:pl-12 group">
+              <div className="w-full md:w-1/2 pl-12 group">
                 <span className="text-red-600 font-heading text-lg font-black block mb-4 group-hover:tracking-[0.2em] transition-all">02. PPT SUBMISSION</span>
                 <p className="text-white/60 text-sm md:text-base max-w-md leading-relaxed">
                   Detail your proposed solution for Round 1. Cover technical architecture, innovation, and implementation roadmaps.
@@ -461,7 +461,7 @@ export default function SuperdesignV3() {
 
             {/*  Step 3  */}
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-12 md:gap-24 scroll-reveal-step">
-              <div className="w-full md:w-1/2 md:text-right md:pr-12 group">
+              <div className="w-full md:w-1/2 md:text-right pl-12 md:pl-0 md:pr-12 group">
                 <span className="text-red-600 font-heading text-lg font-black block mb-4 group-hover:tracking-[0.2em] transition-all">03. SHORTLISTING</span>
                 <p className="text-white/60 text-sm md:text-base max-w-md md:ml-auto leading-relaxed">
                   Top 50 crews are selected based on feasibility and creative impact. Prepare for the final on-ground mission.
@@ -476,7 +476,7 @@ export default function SuperdesignV3() {
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-12 md:gap-24 scroll-reveal-step">
               <div className="hidden md:block w-1/2"></div>
               <div className="w-8 h-8 rounded-full bg-red-600 absolute left-0 md:left-1/2 -translate-x-1/2 z-20 animate-pulse shadow-[0_0_30px_rgba(230,57,70,0.8)]"></div>
-              <div className="w-full md:w-1/2 md:pl-12 group">
+              <div className="w-full md:w-1/2 pl-12 group">
                 <span className="text-red-600 font-heading text-lg font-black block mb-4 group-hover:tracking-[0.2em] transition-all">04. FINAL MISSION</span>
                 <p className="text-white/60 text-sm md:text-base max-w-md leading-relaxed">
                   A high-intensity 12-hour build at MITS Campus. From concept to functional reality under the watchful eyes of industry experts.
@@ -651,6 +651,10 @@ export default function SuperdesignV3() {
     </div>
   );
 }
+
+
+
+
 
 
 
